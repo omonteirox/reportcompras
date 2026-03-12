@@ -1,0 +1,4 @@
+@EndUserText.label: 'ZSD_PurchCostPrice'
+define service ZSD_PurchCostPrice {
+  expose ZC_PurchCostPriceCube;
+}

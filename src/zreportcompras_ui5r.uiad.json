@@ -1,0 +1,35 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "Relatório de compras",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "Relatório de compras"
+  },
+  "ui5AppDetails": {
+    "appId": "assy.gm.relatoriocompras.assy.gm.reportcompras"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_CDFFA8EE6338C538BD2C7F7FD62F7FCE5AF7A5B3_TM",
+    "semanticObject": "zcompras",
+    "action": "display",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_CDFFA8EE6338C538BD2C7F7FD62F7FCE5AF7A5B3_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Relatório de compras",
+        "subtitle": "Relatório de custos"
+      }
+    }
+  ]
+}

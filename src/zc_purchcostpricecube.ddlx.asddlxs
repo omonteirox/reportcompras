@@ -1,0 +1,155 @@
+@Metadata.layer: #CUSTOMER
+
+@UI.chart: [ { chartType: #COLUMN,
+               title: 'Preço de Custo vs Preço de Compra por Material',
+               dimensions: [ 'Material' ],
+               measures: [ 'CostPrice', 'NetPriceAmount', 'PriceVarianceAmount' ] },
+             { qualifier: 'BySupplier',
+               chartType: #BAR,
+               title: 'Análise por Fornecedor',
+               dimensions: [ 'Supplier' ],
+               measures: [ 'NetAmount', 'CostPrice' ] },
+             { qualifier: 'ByMonth',
+               chartType: #LINE,
+               title: 'Evolução Mensal de Compras',
+               dimensions: [ 'CalendarMonth' ],
+               measures: [ 'NetAmount', 'NumberOfPurchaseOrders' ] },
+             { qualifier: 'PriceControl',
+               chartType: #DONUT,
+               title: 'Distribuição por Controle de Preço',
+               dimensions: [ 'PriceControl' ],
+               measures: [ 'NumberOfItems' ] } ]
+
+@UI.headerInfo: { typeName: 'Preço de Custo',
+                  typeNamePlural: 'Preços de Custo de Compras',
+                  title.value: 'Material',
+                  description.value: 'SupplierName' }
+
+@UI.presentationVariant: [ { qualifier: 'Default',
+                             text: 'Visão Padrão',
+                             sortOrder: [ { by: 'PurchaseOrderDate', direction: #DESC } ],
+                             visualizations: [ { type: #AS_LINEITEM } ] } ]
+
+annotate view ZC_PurchCostPriceCube with
+
+{
+  // =========================================================================
+  // Keys & Order Info
+  // =========================================================================
+  @UI.fieldGroup: [ { qualifier: 'OrderInfo', position: 10, label: 'Pedido' } ]
+  @UI.lineItem: [ { position: 10, importance: #HIGH, label: 'Pedido' } ]
+  PurchaseOrder;
+
+  @UI.fieldGroup: [ { qualifier: 'OrderInfo', position: 20, label: 'Item' } ]
+  @UI.lineItem: [ { position: 20, importance: #HIGH, label: 'Item' } ]
+  PurchaseOrderItem;
+
+  @UI.fieldGroup: [ { qualifier: 'OrderInfo', position: 30, label: 'Data' } ]
+  @UI.lineItem: [ { position: 210, importance: #LOW, label: 'Data Pedido' } ]
+  PurchaseOrderDate;
+
+  @UI.fieldGroup: [ { qualifier: 'OrderInfo', position: 40, label: 'Tipo' } ]
+  @UI.lineItem: [ { position: 220, importance: #LOW, label: 'Tipo Pedido' } ]
+  PurchaseOrderType;
+
+  // =========================================================================
+  // Dimensions
+  // =========================================================================
+  @UI.lineItem: [ { position: 80, importance: #MEDIUM, label: 'Empresa' } ]
+  @UI.selectionField: [ { position: 10 } ]
+  CompanyCode;
+
+  @UI.lineItem: [ { position: 70, importance: #MEDIUM, label: 'Centro' } ]
+  @UI.selectionField: [ { position: 20 } ]
+  Plant;
+
+  @UI.lineItem: [ { position: 60, importance: #MEDIUM, label: 'Org. Compras' } ]
+  @UI.selectionField: [ { position: 30 } ]
+  PurchasingOrganization;
+
+  @UI.lineItem: [ { position: 50, importance: #HIGH, label: 'Fornecedor' } ]
+  @UI.selectionField: [ { position: 40 } ]
+  @UI.textArrangement: #TEXT_FIRST
+  Supplier;
+
+  @UI.lineItem: [ { position: 30, importance: #HIGH, label: 'Material' } ]
+  @UI.selectionField: [ { position: 50 } ]
+  Material;
+
+  @UI.lineItem: [ { position: 200, importance: #LOW, label: 'Grupo Material' } ]
+  @UI.selectionField: [ { position: 60 } ]
+  MaterialGroup;
+
+  @UI.lineItem: [ { position: 190, importance: #MEDIUM, label: 'Grupo Compras' } ]
+  @UI.selectionField: [ { position: 70 } ]
+  PurchasingGroup;
+
+  @UI.selectionField: [ { position: 80 } ]
+  CalendarYear;
+
+  @UI.selectionField: [ { position: 90 } ]
+  CalendarMonth;
+
+  @UI.lineItem: [ { position: 160, importance: #MEDIUM, label: 'Controle Preço' } ]
+  @UI.selectionField: [ { position: 100 } ]
+  PriceControl;
+
+  @UI.lineItem: [ { position: 40, importance: #HIGH, label: 'Descrição Material' } ]
+  MaterialDescription;
+
+  // =========================================================================
+  // Measures / Price Analysis
+  // =========================================================================
+  @UI.lineItem: [ { position: 90, importance: #HIGH, label: 'Qtd Pedida' } ]
+  OrderQuantity;
+
+  @UI.fieldGroup: [ { qualifier: 'PriceAnalysis', position: 10, label: 'Preço Líquido' } ]
+  @UI.lineItem: [ { position: 100, importance: #HIGH, label: 'Preço Líquido (Un.)' } ]
+  NetPriceAmount;
+
+  @UI.lineItem: [ { position: 110, importance: #HIGH, label: 'Valor Líquido Total' } ]
+  NetAmount;
+
+  @UI.dataPoint.title: 'Custo (PMP0)'
+  @UI.fieldGroup: [ { qualifier: 'PriceAnalysis', position: 20, label: 'Custo (PMP0)' } ]
+  @UI.lineItem: [ { position: 120, importance: #HIGH, label: '★ CUSTO (PMP0)' } ]
+  CostPrice;
+
+  @UI.fieldGroup: [ { qualifier: 'PriceAnalysis', position: 30, label: 'Preço Padrão' } ]
+  @UI.lineItem: [ { position: 130, importance: #HIGH, label: 'Preço Padrão' } ]
+  StandardPrice;
+
+  @UI.fieldGroup: [ { qualifier: 'PriceAnalysis', position: 40, label: 'Preço Médio Móvel' } ]
+  @UI.lineItem: [ { position: 140, importance: #HIGH, label: 'Preço Médio Móvel' } ]
+  MovingAveragePrice;
+
+  @UI.dataPoint.title: 'Variação (Compra vs PMP0)'
+  @UI.fieldGroup: [ { qualifier: 'PriceAnalysis', position: 50, label: 'Variação' } ]
+  @UI.lineItem: [ { position: 150, importance: #HIGH, label: 'Variação' } ]
+  PriceVarianceAmount;
+
+  @UI.lineItem: [ { position: 170, importance: #MEDIUM, label: 'Classe Avaliação' } ]
+  ValuationClass;
+
+  @UI.fieldGroup: [ { qualifier: 'PriceAnalysis', position: 60, label: 'Preço Anterior' } ]
+  @UI.lineItem: [ { position: 180, importance: #LOW, label: 'Preço Anterior' } ]
+  PrevInvtryPriceInCoCodeCrcy;
+
+  // =========================================================================
+  // Other fields
+  // =========================================================================
+  @UI.lineItem: [ { position: 230, importance: #LOW, label: 'Contrato' } ]
+  PurchaseContract;
+
+  @UI.lineItem: [ { position: 240, importance: #LOW, label: 'Material Fornecedor' } ]
+  SupplierMaterialNumber;
+
+  @UI.lineItem: [ { position: 250, importance: #LOW, label: 'Nº Pedidos' } ]
+  NumberOfPurchaseOrders;
+
+  @UI.lineItem: [ { position: 260, importance: #LOW, label: 'Nº Itens' } ]
+  NumberOfItems;
+
+  @UI.fieldGroup: [ { qualifier: 'OrderInfo', position: 50, label: 'Criado por' } ]
+  CreatedByUser;
+}
