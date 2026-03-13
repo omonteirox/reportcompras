@@ -74,6 +74,7 @@ annotate view ZC_PurchCostPriceCube with
 
   @UI.lineItem: [ { position: 30, importance: #HIGH, label: 'Material' } ]
   @UI.selectionField: [ { position: 50 } ]
+  @UI.textArrangement: #TEXT_SEPARATE
   Material;
 
   @UI.lineItem: [ { position: 200, importance: #LOW, label: 'Grupo Material' } ]
