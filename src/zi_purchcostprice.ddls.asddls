@@ -176,9 +176,12 @@ define veiw entity ZI_PurchCostPrice
       POItem.NetAmount,
 
       @EndUserText.label: 'Preço Unitário Real'
-      @Semantics.amount.currencyCode: 'DocumentCurrency'
-      division( POItem.NetAmount, POItem.OrderQuantity, 5 )
-                                                 as UnitPrice,
+      cast(
+        division( cast(POItem.NetAmount as abap.dec(15,5)),
+                  cast(POItem.OrderQuantity as abap.dec(15,5)),
+                  5 )
+        as abap.dec(15,5)
+      )                                          as UnitPrice,
 
       // ---------------------------------------------------------------------------
       // Material Valuation - Preço de Custo

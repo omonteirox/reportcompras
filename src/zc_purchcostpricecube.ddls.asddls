@@ -143,7 +143,6 @@ define view entity ZC_PurchCostPriceCube
       NetAmount,
 
       @EndUserText.label: 'Preço Unitário Real'
-      @Semantics.amount.currencyCode: 'DocumentCurrency'
       UnitPrice,
 
       // =========================================================================
