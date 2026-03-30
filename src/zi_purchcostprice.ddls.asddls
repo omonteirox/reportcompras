@@ -11,7 +11,7 @@
 
 @VDM.viewType: #BASIC
 
-define view entity ZI_PurchCostPrice
+define veiw entity ZI_PurchCostPrice
   as select from    I_PurchaseOrderItemAPI01 as POItem
 
     -- Join com header do pedido
@@ -174,6 +174,13 @@ define view entity ZI_PurchCostPrice
 
       @Semantics.amount.currencyCode: 'DocumentCurrency'
       POItem.NetAmount,
+
+      @EndUserText.label: 'Preço Unitário Real'
+      @Semantics.amount.currencyCode: 'DocumentCurrency'
+      cast(
+        division( POItem.NetAmount, POItem.OrderQuantity, 5 )
+        as abap.curr(15,5)
+      )                                          as UnitPrice,
 
       // ---------------------------------------------------------------------------
       // Material Valuation - Preço de Custo

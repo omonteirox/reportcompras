@@ -134,13 +134,17 @@ define view entity ZC_PurchCostPriceCube
       // =========================================================================
       // MEASURES - Preço de Compra (Preço Líquido)
       // =========================================================================
-      @EndUserText.label: 'Preço Líquido (Unitário)'
+      @EndUserText.label: 'Preço Líq. (Unid. Preço)'
       @Semantics.amount.currencyCode: 'DocumentCurrency'
       NetPriceAmount,
 
       @EndUserText.label: 'Valor Líquido Total'
       @Semantics.amount.currencyCode: 'DocumentCurrency'
       NetAmount,
+
+      @EndUserText.label: 'Preço Unitário Real'
+      @Semantics.amount.currencyCode: 'DocumentCurrency'
+      UnitPrice,
 
       // =========================================================================
       // MEASURES - Preço de Custo

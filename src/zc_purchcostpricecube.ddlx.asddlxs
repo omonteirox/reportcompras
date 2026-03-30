@@ -1,9 +1,9 @@
-@Metadata.layer: #CUSTOMER
+@Metadata.layer: #INVALIDO
 
 @UI.chart: [ { chartType: #COLUMN,
                title: 'Preço de Custo vs Preço de Compra por Material',
                dimensions: [ 'Material' ],
-               measures: [ 'CostPrice', 'NetPriceAmount', 'PriceVarianceAmount' ] },
+               measures: [ 'CostPrice', 'UnitPrice', 'PriceVarianceAmount' ] },
              { qualifier: 'BySupplier',
                chartType: #BAR,
                title: 'Análise por Fornecedor',
@@ -104,8 +104,12 @@ annotate view ZC_PurchCostPriceCube with
   @UI.lineItem: [ { position: 90, importance: #HIGH, label: 'Qtd Pedida' } ]
   OrderQuantity;
 
-  @UI.fieldGroup: [ { qualifier: 'PriceAnalysis', position: 10, label: 'Preço Líquido' } ]
-  @UI.lineItem: [ { position: 100, importance: #HIGH, label: 'Preço Líquido (Un.)' } ]
+  @UI.lineItem: [ { position: 95, importance: #HIGH, label: 'Preço Unit. Real' } ]
+  @UI.fieldGroup: [ { qualifier: 'PriceAnalysis', position: 10, label: 'Preço Unitário Real' } ]
+  UnitPrice;
+
+  @UI.fieldGroup: [ { qualifier: 'PriceAnalysis', position: 12, label: 'Preço Líq. (Unid. Preço)' } ]
+  @UI.lineItem: [ { position: 100, importance: #MEDIUM, label: 'Preço Líq. (Unid. Preço)' } ]
   NetPriceAmount;
 
   @UI.lineItem: [ { position: 110, importance: #HIGH, label: 'Valor Líquido Total' } ]
