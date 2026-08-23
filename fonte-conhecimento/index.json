@@ -1,0 +1,1649 @@
+{
+  "version": "1.0.0",
+  "last_updated": "2026-03-11",
+  "description": "Knowledge base index for SAP Public Cloud Edition (SAP Cloud ERP) agents",
+  "domains": {
+    "cds": {
+      "label": "Core Data Services",
+      "description": "CDS views, annotations, associations, projections e extensões",
+      "path": "cds/",
+      "agents": [
+        "rap-specialist",
+        "tech-lead",
+        "generalista"
+      ],
+      "entries": [
+        {
+          "id": "cds-err-001",
+          "title": "❌ Erro: Falta de @Metadata.ignorePropagatedAnnotations em CDS Projection View causa erro ATC SADL RUNTIME 004",
+          "file": "cds/erros-aprendizados/annotation-propagation-projection.md",
+          "tags": [
+            "cds",
+            "projection-view",
+            "annotation-propagation",
+            "objectmodel",
+            "atc",
+            "sadl-runtime",
+            "ignorePropagatedAnnotations",
+            "erro-aprendido",
+            "alta"
+          ],
+          "agents": [
+            "rap-specialist",
+            "aprendiz"
+          ],
+          "tipo": "erro-aprendido",
+          "severidade": "alta",
+          "added": "2026-03-10",
+          "mandatory": false
+        },
+        {
+          "id": "cds-002",
+          "title": "CDS Avançado: Annotations UI, Value Helps, Extensions e Boas Práticas",
+          "file": "cds/best-practices/annotations-value-helps-extensions.md",
+          "tags": [
+            "cds",
+            "annotations",
+            "ui",
+            "value-help",
+            "extension",
+            "ddlx",
+            "fiori-elements"
+          ],
+          "agents": [
+            "rap-specialist",
+            "tech-lead"
+          ],
+          "added": "2026-03-11",
+          "mandatory": false
+        }
+      ]
+    },
+    "rap": {
+      "label": "RESTful Application Programming (RAP)",
+      "description": "Behavior definitions, behavior implementations, actions, validations, determinations, drafts",
+      "path": "rap/",
+      "agents": [
+        "rap-specialist",
+        "tech-lead"
+      ],
+      "entries": [
+        {
+          "id": "rap-001",
+          "title": "RAP Managed Scenario — Template Completo",
+          "file": "rap/best-practices/managed-scenario.md",
+          "tags": [
+            "rap",
+            "managed",
+            "bdef",
+            "behavior-implementation",
+            "template"
+          ],
+          "agents": [
+            "rap-specialist",
+            "tech-lead"
+          ],
+          "added": "2026-03-09",
+          "mandatory": false
+        },
+        {
+          "id": "rap-err-002",
+          "title": "❌ Erro: SELECT dentro de LOOP em Determination",
+          "file": "rap/erros-aprendizados/select-dentro-loop-em-determination.md",
+          "tags": [
+            "performance",
+            "select",
+            "loop",
+            "determination",
+            "n-plus-1",
+            "erro-aprendido",
+            "alta"
+          ],
+          "agents": [
+            "rap-specialist",
+            "aprendiz"
+          ],
+          "tipo": "erro-aprendido",
+          "severidade": "alta",
+          "added": "2026-03-09",
+          "mandatory": false
+        },
+        {
+          "id": "rap-003",
+          "title": "Data Modeling RAP: Arquitetura 3 Camadas (R/I/C), BDEF e OData Service",
+          "file": "rap/best-practices/data-modeling-cds-layers.md",
+          "tags": [
+            "rap",
+            "cds",
+            "bdef",
+            "odata",
+            "draft",
+            "managed-scenario",
+            "3-camadas"
+          ],
+          "agents": [
+            "rap-specialist",
+            "tech-lead"
+          ],
+          "added": "2026-03-11",
+          "mandatory": false
+        },
+        {
+          "id": "rap-004",
+          "title": "Business Logic RAP: Validations, Determinations, Actions, Feature Control e EML",
+          "file": "rap/best-practices/business-logic-validations-determinations-actions.md",
+          "tags": [
+            "rap",
+            "validation",
+            "determination",
+            "action",
+            "feature-control",
+            "eml",
+            "business-logic"
+          ],
+          "agents": [
+            "rap-specialist",
+            "tech-lead"
+          ],
+          "added": "2026-03-11",
+          "mandatory": false
+        },
+        {
+          "id": "rap-005",
+          "title": "Integração Event-Driven: RAP Business Events e Event Binding no S/4HANA Cloud",
+          "file": "rap/best-practices/event-driven-integration.md",
+          "tags": [
+            "event-driven",
+            "rap-events",
+            "event-binding",
+            "integration",
+            "aplo",
+            "sco2",
+            "asynchronous"
+          ],
+          "agents": [
+            "rap-specialist",
+            "badi-specialist",
+            "tech-lead"
+          ],
+          "added": "2026-03-11",
+          "mandatory": false
+        },
+        {
+          "id": "rap-006",
+          "title": "Message Handling em RAP: MSAG, IF_ABAP_BEHV_MSG e Application Log",
+          "file": "rap/best-practices/message-handling-application-log.md",
+          "tags": [
+            "message-handling",
+            "msag",
+            "if-abap-behv-msg",
+            "validation",
+            "application-log",
+            "cl-bali-log",
+            "tobj"
+          ],
+          "agents": [
+            "rap-specialist",
+            "tech-lead"
+          ],
+          "added": "2026-03-11",
+          "mandatory": false
+        }
+      ]
+    },
+    "badis": {
+      "label": "Business Add-Ins (BAdIs)",
+      "description": "Enhancement spots, BAdI definitions, implementations, switch framework, customer includes",
+      "path": "badis/",
+      "agents": [
+        "badi-specialist",
+        "tech-lead"
+      ],
+      "entries": [
+        {
+          "id": "badis-001",
+          "title": "Clean Core & BAdI: Extensões RAP, CDS e BAdI sem tocar no Standard SAP",
+          "file": "badis/best-practices/clean-core-badi-rap-extensions.md",
+          "tags": [
+            "clean-core",
+            "badi",
+            "rap-extension",
+            "cds-extension",
+            "bdef-extension",
+            "s4hana-cloud",
+            "upgrade-safety"
+          ],
+          "agents": [
+            "badi-specialist",
+            "tech-lead",
+            "rap-specialist"
+          ],
+          "added": "2026-03-11",
+          "mandatory": false
+        }
+      ]
+    },
+    "reports": {
+      "label": "Reports & Analytics",
+      "description": "ABAP reports, ALV/SALV, selection screens, performance optimization",
+      "path": "reports/",
+      "agents": [
+        "reports-specialist",
+        "tech-lead"
+      ],
+      "entries": []
+    },
+    "behavior-definitions": {
+      "label": "Behavior Definitions",
+      "description": "BDEF managed/unmanaged/abstract/projection, draft, authorization, etag",
+      "path": "behavior-definitions/",
+      "agents": [
+        "rap-specialist",
+        "tech-lead"
+      ],
+      "entries": [
+        {
+          "id": "behavior-definitions-err-001",
+          "title": "❌ Erro: use side effects sem bloco {} em BDEF de projeção",
+          "file": "behavior-definitions/erros-aprendizados/use-side-effects-syntax.md",
+          "tags": [
+            "bdef",
+            "projection",
+            "use-side-effects",
+            "syntax-error",
+            "read-only",
+            "erro-aprendido",
+            "alta"
+          ],
+          "agents": [
+            "rap-specialist",
+            "aprendiz"
+          ],
+          "tipo": "erro-aprendido",
+          "severidade": "alta",
+          "added": "2026-03-10",
+          "mandatory": false
+        }
+      ]
+    },
+    "classes": {
+      "label": "ABAP Classes & Interfaces",
+      "description": "Classes globais, interfaces, design patterns, unit tests",
+      "path": "classes/",
+      "agents": [
+        "tech-lead",
+        "generalista"
+      ],
+      "entries": [
+        {
+          "id": "classes-001",
+          "title": "Number Range: NROB e CL_NUMBERRANGE_RUNTIME em ABAP Cloud com RAP",
+          "file": "classes/best-practices/number-range-object.md",
+          "tags": [
+            "number-range",
+            "nrob",
+            "cl-numberrange-runtime",
+            "abap-cloud",
+            "rap",
+            "sequence"
+          ],
+          "agents": [
+            "rap-specialist",
+            "tech-lead"
+          ],
+          "added": "2026-03-11",
+          "mandatory": false
+        },
+        {
+          "id": "classes-002",
+          "title": "Application Job: IF_APJ_RT_RUN, Job Catalog, Job Template e Application Log",
+          "file": "classes/best-practices/application-job-if-apj-rt-run.md",
+          "tags": [
+            "application-job",
+            "if-apj-rt-run",
+            "sajc",
+            "sajt",
+            "background-job",
+            "cl-bali-log",
+            "application-log"
+          ],
+          "agents": [
+            "rap-specialist",
+            "tech-lead"
+          ],
+          "added": "2026-03-11",
+          "mandatory": false
+        },
+        {
+          "id": "classes-003",
+          "title": "Email Notification: CL_BCS_MAIL_MESSAGE para Envio de Email em ABAP Cloud",
+          "file": "classes/best-practices/email-notification-cl-bcs.md",
+          "tags": [
+            "email",
+            "cl-bcs",
+            "notification",
+            "abap-cloud",
+            "smtp",
+            "output-channel",
+            "smart-forms"
+          ],
+          "agents": [
+            "rap-specialist",
+            "tech-lead"
+          ],
+          "added": "2026-03-11",
+          "mandatory": false
+        }
+      ]
+    },
+    "rules": {
+      "label": "Rules & Workflows",
+      "description": "Regras obrigatórias, naming conventions, workflows de desenvolvimento, checklists",
+      "path": "rules/",
+      "agents": [
+        "tech-lead",
+        "generalista",
+        "rap-specialist",
+        "badi-specialist",
+        "reports-specialist"
+      ],
+      "entries": [
+        {
+          "id": "rules-001",
+          "title": "Naming Conventions SAP Cloud ERP",
+          "file": "rules/naming-conventions.md",
+          "tags": [
+            "naming",
+            "conventions",
+            "mandatory",
+            "objects"
+          ],
+          "agents": [
+            "tech-lead",
+            "generalista",
+            "rap-specialist",
+            "badi-specialist",
+            "reports-specialist"
+          ],
+          "added": "2026-03-09",
+          "mandatory": true
+        },
+        {
+          "id": "rules-002",
+          "title": "Development Workflow & Transport",
+          "file": "rules/development-workflow.md",
+          "tags": [
+            "workflow",
+            "transport",
+            "atc",
+            "package",
+            "mandatory"
+          ],
+          "agents": [
+            "tech-lead",
+            "generalista"
+          ],
+          "added": "2026-03-09",
+          "mandatory": true
+        },
+        {
+          "id": "rules-003",
+          "title": "Code Quality Checklist",
+          "file": "rules/code-quality-checklist.md",
+          "tags": [
+            "quality",
+            "checklist",
+            "clean-core",
+            "performance",
+            "mandatory"
+          ],
+          "agents": [
+            "tech-lead",
+            "rap-specialist",
+            "badi-specialist",
+            "reports-specialist"
+          ],
+          "added": "2026-03-09",
+          "mandatory": true
+        },
+        {
+          "id": "rules-004",
+          "title": "Autorização e IAM: Authorization Objects, Access Control CDS, IAM Apps e Business Catalogs",
+          "file": "rules/authorization-iam-roles.md",
+          "tags": [
+            "authorization",
+            "iam",
+            "dcls",
+            "access-control",
+            "business-catalog",
+            "pfcg",
+            "role-based"
+          ],
+          "agents": [
+            "rap-specialist",
+            "tech-lead"
+          ],
+          "added": "2026-03-11",
+          "mandatory": false
+        }
+      ]
+    },
+    "abap-fundamentos": {
+      "label": "ABAP Fundamentos & Cheat Sheets",
+      "description": "Cheat sheets completos de ABAP: tabelas internas, SQL, OO, RAP, BAdIs, CDS, cloud, performance, unit tests",
+      "path": "abap-fundamentos/",
+      "agents": [
+        "tech-lead",
+        "generalista",
+        "rap-specialist",
+        "badi-specialist",
+        "reports-specialist"
+      ],
+      "entries": [
+        {
+          "id": "abap-fundamentos-001",
+          "title": "01 Internal Tables",
+          "file": "abap-fundamentos/01_Internal_Tables.md",
+          "tags": [
+            "abap",
+            "fundamentos",
+            "cheat-sheet"
+          ],
+          "agents": [
+            "tech-lead",
+            "generalista"
+          ],
+          "source": "abap-cheat-sheets2",
+          "added": "2026-03-09",
+          "mandatory": false
+        },
+        {
+          "id": "abap-fundamentos-002",
+          "title": "02 Structures",
+          "file": "abap-fundamentos/02_Structures.md",
+          "tags": [
+            "abap",
+            "fundamentos",
+            "cheat-sheet"
+          ],
+          "agents": [
+            "tech-lead",
+            "generalista"
+          ],
+          "source": "abap-cheat-sheets2",
+          "added": "2026-03-09",
+          "mandatory": false
+        },
+        {
+          "id": "abap-fundamentos-003",
+          "title": "03 ABAP SQL",
+          "file": "abap-fundamentos/03_ABAP_SQL.md",
+          "tags": [
+            "abap",
+            "fundamentos",
+            "cheat-sheet"
+          ],
+          "agents": [
+            "tech-lead",
+            "generalista"
+          ],
+          "source": "abap-cheat-sheets2",
+          "added": "2026-03-09",
+          "mandatory": false
+        },
+        {
+          "id": "abap-fundamentos-004",
+          "title": "04 ABAP Object Orientation",
+          "file": "abap-fundamentos/04_ABAP_Object_Orientation.md",
+          "tags": [
+            "oop",
+            "class",
+            "interface",
+            "inheritance",
+            "cheat-sheet"
+          ],
+          "agents": [
+            "tech-lead"
+          ],
+          "source": "abap-cheat-sheets2",
+          "added": "2026-03-09",
+          "mandatory": false
+        },
+        {
+          "id": "abap-fundamentos-005",
+          "title": "05 Constructor Expressions",
+          "file": "abap-fundamentos/05_Constructor_Expressions.md",
+          "tags": [
+            "abap",
+            "fundamentos",
+            "cheat-sheet"
+          ],
+          "agents": [
+            "tech-lead",
+            "generalista"
+          ],
+          "source": "abap-cheat-sheets2",
+          "added": "2026-03-09",
+          "mandatory": false
+        },
+        {
+          "id": "abap-fundamentos-006",
+          "title": "06 Dynamic Programming",
+          "file": "abap-fundamentos/06_Dynamic_Programming.md",
+          "tags": [
+            "abap",
+            "fundamentos",
+            "cheat-sheet"
+          ],
+          "agents": [
+            "tech-lead",
+            "generalista"
+          ],
+          "source": "abap-cheat-sheets2",
+          "added": "2026-03-09",
+          "mandatory": false
+        },
+        {
+          "id": "abap-fundamentos-007",
+          "title": "07 String Processing",
+          "file": "abap-fundamentos/07_String_Processing.md",
+          "tags": [
+            "abap",
+            "fundamentos",
+            "cheat-sheet"
+          ],
+          "agents": [
+            "tech-lead",
+            "generalista"
+          ],
+          "source": "abap-cheat-sheets2",
+          "added": "2026-03-09",
+          "mandatory": false
+        },
+        {
+          "id": "abap-fundamentos-008",
+          "title": "08 EML ABAP for RAP",
+          "file": "abap-fundamentos/08_EML_ABAP_for_RAP.md",
+          "tags": [
+            "eml",
+            "rap",
+            "read-entities",
+            "modify-entities",
+            "cheat-sheet"
+          ],
+          "agents": [
+            "rap-specialist"
+          ],
+          "source": "abap-cheat-sheets2",
+          "added": "2026-03-09",
+          "mandatory": false
+        },
+        {
+          "id": "abap-fundamentos-009",
+          "title": "09 Bits and Bytes",
+          "file": "abap-fundamentos/09_Bits_and_Bytes.md",
+          "tags": [
+            "abap",
+            "fundamentos",
+            "cheat-sheet"
+          ],
+          "agents": [
+            "tech-lead",
+            "generalista"
+          ],
+          "source": "abap-cheat-sheets2",
+          "added": "2026-03-09",
+          "mandatory": false
+        },
+        {
+          "id": "abap-fundamentos-010",
+          "title": "10 ABAP SQL Hierarchies",
+          "file": "abap-fundamentos/10_ABAP_SQL_Hierarchies.md",
+          "tags": [
+            "abap",
+            "fundamentos",
+            "cheat-sheet"
+          ],
+          "agents": [
+            "tech-lead",
+            "generalista"
+          ],
+          "source": "abap-cheat-sheets2",
+          "added": "2026-03-09",
+          "mandatory": false
+        },
+        {
+          "id": "abap-fundamentos-011",
+          "title": "11 Internal Tables Grouping",
+          "file": "abap-fundamentos/11_Internal_Tables_Grouping.md",
+          "tags": [
+            "abap",
+            "fundamentos",
+            "cheat-sheet"
+          ],
+          "agents": [
+            "tech-lead",
+            "generalista"
+          ],
+          "source": "abap-cheat-sheets2",
+          "added": "2026-03-09",
+          "mandatory": false
+        },
+        {
+          "id": "abap-fundamentos-012",
+          "title": "12 AMDP",
+          "file": "abap-fundamentos/12_AMDP.md",
+          "tags": [
+            "abap",
+            "fundamentos",
+            "cheat-sheet"
+          ],
+          "agents": [
+            "tech-lead",
+            "generalista"
+          ],
+          "source": "abap-cheat-sheets2",
+          "added": "2026-03-09",
+          "mandatory": false
+        },
+        {
+          "id": "abap-fundamentos-013",
+          "title": "13 Program Flow Logic",
+          "file": "abap-fundamentos/13_Program_Flow_Logic.md",
+          "tags": [
+            "abap",
+            "fundamentos",
+            "cheat-sheet"
+          ],
+          "agents": [
+            "tech-lead",
+            "generalista"
+          ],
+          "source": "abap-cheat-sheets2",
+          "added": "2026-03-09",
+          "mandatory": false
+        },
+        {
+          "id": "abap-fundamentos-014",
+          "title": "14 ABAP Unit Tests",
+          "file": "abap-fundamentos/14_ABAP_Unit_Tests.md",
+          "tags": [
+            "unit-test",
+            "abap-unit",
+            "test-double",
+            "mock",
+            "cheat-sheet"
+          ],
+          "agents": [
+            "tech-lead"
+          ],
+          "source": "abap-cheat-sheets2",
+          "added": "2026-03-09",
+          "mandatory": false
+        },
+        {
+          "id": "abap-fundamentos-015",
+          "title": "15 CDS View Entities",
+          "file": "abap-fundamentos/15_CDS_View_Entities.md",
+          "tags": [
+            "cds",
+            "view-entity",
+            "association",
+            "annotation",
+            "cheat-sheet"
+          ],
+          "agents": [
+            "rap-specialist",
+            "tech-lead"
+          ],
+          "source": "abap-cheat-sheets2",
+          "added": "2026-03-09",
+          "mandatory": false
+        },
+        {
+          "id": "abap-fundamentos-016",
+          "title": "16 Data Types and Objects",
+          "file": "abap-fundamentos/16_Data_Types_and_Objects.md",
+          "tags": [
+            "abap",
+            "fundamentos",
+            "cheat-sheet"
+          ],
+          "agents": [
+            "tech-lead",
+            "generalista"
+          ],
+          "source": "abap-cheat-sheets2",
+          "added": "2026-03-09",
+          "mandatory": false
+        },
+        {
+          "id": "abap-fundamentos-017",
+          "title": "17 SAP LUW",
+          "file": "abap-fundamentos/17_SAP_LUW.md",
+          "tags": [
+            "abap",
+            "fundamentos",
+            "cheat-sheet"
+          ],
+          "agents": [
+            "tech-lead",
+            "generalista"
+          ],
+          "source": "abap-cheat-sheets2",
+          "added": "2026-03-09",
+          "mandatory": false
+        },
+        {
+          "id": "abap-fundamentos-018",
+          "title": "18 Dynpro",
+          "file": "abap-fundamentos/18_Dynpro.md",
+          "tags": [
+            "abap",
+            "fundamentos",
+            "cheat-sheet"
+          ],
+          "agents": [
+            "tech-lead",
+            "generalista"
+          ],
+          "source": "abap-cheat-sheets2",
+          "added": "2026-03-09",
+          "mandatory": false
+        },
+        {
+          "id": "abap-fundamentos-019",
+          "title": "19 ABAP for Cloud Development",
+          "file": "abap-fundamentos/19_ABAP_for_Cloud_Development.md",
+          "tags": [
+            "abap-cloud",
+            "cloud-readiness",
+            "released-api",
+            "clean-core",
+            "cheat-sheet"
+          ],
+          "agents": [
+            "tech-lead",
+            "generalista"
+          ],
+          "source": "abap-cheat-sheets2",
+          "added": "2026-03-09",
+          "mandatory": false
+        },
+        {
+          "id": "abap-fundamentos-020",
+          "title": "20 Selection Screens Lists",
+          "file": "abap-fundamentos/20_Selection_Screens_Lists.md",
+          "tags": [
+            "selection-screen",
+            "parameters",
+            "select-options",
+            "write",
+            "cheat-sheet"
+          ],
+          "agents": [
+            "reports-specialist"
+          ],
+          "source": "abap-cheat-sheets2",
+          "added": "2026-03-09",
+          "mandatory": false
+        },
+        {
+          "id": "abap-fundamentos-021",
+          "title": "21 XML JSON",
+          "file": "abap-fundamentos/21_XML_JSON.md",
+          "tags": [
+            "abap",
+            "fundamentos",
+            "cheat-sheet"
+          ],
+          "agents": [
+            "tech-lead",
+            "generalista"
+          ],
+          "source": "abap-cheat-sheets2",
+          "added": "2026-03-09",
+          "mandatory": false
+        },
+        {
+          "id": "abap-fundamentos-022",
+          "title": "22 Released ABAP Classes",
+          "file": "abap-fundamentos/22_Released_ABAP_Classes.md",
+          "tags": [
+            "released",
+            "cl_",
+            "if_",
+            "api",
+            "cheat-sheet"
+          ],
+          "agents": [
+            "tech-lead",
+            "generalista"
+          ],
+          "source": "abap-cheat-sheets2",
+          "added": "2026-03-09",
+          "mandatory": false
+        },
+        {
+          "id": "abap-fundamentos-023",
+          "title": "23 Date and Time",
+          "file": "abap-fundamentos/23_Date_and_Time.md",
+          "tags": [
+            "abap",
+            "fundamentos",
+            "cheat-sheet"
+          ],
+          "agents": [
+            "tech-lead",
+            "generalista"
+          ],
+          "source": "abap-cheat-sheets2",
+          "added": "2026-03-09",
+          "mandatory": false
+        },
+        {
+          "id": "abap-fundamentos-024",
+          "title": "24 Builtin Functions",
+          "file": "abap-fundamentos/24_Builtin_Functions.md",
+          "tags": [
+            "abap",
+            "fundamentos",
+            "cheat-sheet"
+          ],
+          "agents": [
+            "tech-lead",
+            "generalista"
+          ],
+          "source": "abap-cheat-sheets2",
+          "added": "2026-03-09",
+          "mandatory": false
+        },
+        {
+          "id": "abap-fundamentos-025",
+          "title": "25 Authorization Checks",
+          "file": "abap-fundamentos/25_Authorization_Checks.md",
+          "tags": [
+            "authorization",
+            "authority-check",
+            "acl",
+            "dcl",
+            "cheat-sheet"
+          ],
+          "agents": [
+            "tech-lead",
+            "rap-specialist"
+          ],
+          "source": "abap-cheat-sheets2",
+          "added": "2026-03-09",
+          "mandatory": false
+        },
+        {
+          "id": "abap-fundamentos-026",
+          "title": "26 ABAP Dictionary",
+          "file": "abap-fundamentos/26_ABAP_Dictionary.md",
+          "tags": [
+            "abap",
+            "fundamentos",
+            "cheat-sheet"
+          ],
+          "agents": [
+            "tech-lead",
+            "generalista"
+          ],
+          "source": "abap-cheat-sheets2",
+          "added": "2026-03-09",
+          "mandatory": false
+        },
+        {
+          "id": "abap-fundamentos-027",
+          "title": "27 Exceptions",
+          "file": "abap-fundamentos/27_Exceptions.md",
+          "tags": [
+            "exception",
+            "cx_",
+            "zcx",
+            "try-catch",
+            "cheat-sheet"
+          ],
+          "agents": [
+            "tech-lead"
+          ],
+          "source": "abap-cheat-sheets2",
+          "added": "2026-03-09",
+          "mandatory": false
+        },
+        {
+          "id": "abap-fundamentos-028",
+          "title": "28 Regular Expressions",
+          "file": "abap-fundamentos/28_Regular_Expressions.md",
+          "tags": [
+            "abap",
+            "fundamentos",
+            "cheat-sheet"
+          ],
+          "agents": [
+            "tech-lead",
+            "generalista"
+          ],
+          "source": "abap-cheat-sheets2",
+          "added": "2026-03-09",
+          "mandatory": false
+        },
+        {
+          "id": "abap-fundamentos-029",
+          "title": "29 Numeric Operations",
+          "file": "abap-fundamentos/29_Numeric_Operations.md",
+          "tags": [
+            "abap",
+            "fundamentos",
+            "cheat-sheet"
+          ],
+          "agents": [
+            "tech-lead",
+            "generalista"
+          ],
+          "source": "abap-cheat-sheets2",
+          "added": "2026-03-09",
+          "mandatory": false
+        },
+        {
+          "id": "abap-fundamentos-030",
+          "title": "30 Generative AI",
+          "file": "abap-fundamentos/30_Generative_AI.md",
+          "tags": [
+            "abap",
+            "fundamentos",
+            "cheat-sheet"
+          ],
+          "agents": [
+            "tech-lead",
+            "generalista"
+          ],
+          "source": "abap-cheat-sheets2",
+          "added": "2026-03-09",
+          "mandatory": false
+        },
+        {
+          "id": "abap-fundamentos-031",
+          "title": "31 WHERE Conditions",
+          "file": "abap-fundamentos/31_WHERE_Conditions.md",
+          "tags": [
+            "abap",
+            "fundamentos",
+            "cheat-sheet"
+          ],
+          "agents": [
+            "tech-lead",
+            "generalista"
+          ],
+          "source": "abap-cheat-sheets2",
+          "added": "2026-03-09",
+          "mandatory": false
+        },
+        {
+          "id": "abap-fundamentos-032",
+          "title": "32 Performance Notes",
+          "file": "abap-fundamentos/32_Performance_Notes.md",
+          "tags": [
+            "performance",
+            "select",
+            "loop",
+            "index",
+            "hashed-table",
+            "cheat-sheet"
+          ],
+          "agents": [
+            "tech-lead"
+          ],
+          "source": "abap-cheat-sheets2",
+          "added": "2026-03-09",
+          "mandatory": false
+        },
+        {
+          "id": "abap-fundamentos-033",
+          "title": "33 ABAP Release News",
+          "file": "abap-fundamentos/33_ABAP_Release_News.md",
+          "tags": [
+            "abap",
+            "fundamentos",
+            "cheat-sheet"
+          ],
+          "agents": [
+            "tech-lead",
+            "generalista"
+          ],
+          "source": "abap-cheat-sheets2",
+          "added": "2026-03-09",
+          "mandatory": false
+        },
+        {
+          "id": "abap-fundamentos-034",
+          "title": "34 OO Design Patterns",
+          "file": "abap-fundamentos/34_OO_Design_Patterns.md",
+          "tags": [
+            "design-pattern",
+            "singleton",
+            "factory",
+            "observer",
+            "cheat-sheet"
+          ],
+          "agents": [
+            "tech-lead"
+          ],
+          "source": "abap-cheat-sheets2",
+          "added": "2026-03-09",
+          "mandatory": false
+        },
+        {
+          "id": "abap-fundamentos-035",
+          "title": "35 BAdIs",
+          "file": "abap-fundamentos/35_BAdIs.md",
+          "tags": [
+            "badi",
+            "enhancement",
+            "spot",
+            "cheat-sheet"
+          ],
+          "agents": [
+            "badi-specialist",
+            "tech-lead"
+          ],
+          "source": "abap-cheat-sheets2",
+          "added": "2026-03-09",
+          "mandatory": false
+        },
+        {
+          "id": "abap-fundamentos-036",
+          "title": "36 RAP Behavior Definition Language",
+          "file": "abap-fundamentos/36_RAP_Behavior_Definition_Language.md",
+          "tags": [
+            "rap",
+            "bdef",
+            "behavior-definition",
+            "EML",
+            "cheat-sheet"
+          ],
+          "agents": [
+            "rap-specialist",
+            "tech-lead"
+          ],
+          "source": "abap-cheat-sheets2",
+          "added": "2026-03-09",
+          "mandatory": false
+        },
+        {
+          "id": "abap-fundamentos-037",
+          "title": "rap custom action button",
+          "file": "abap-fundamentos/rap_custom_action_button.md",
+          "tags": [
+            "rap",
+            "action",
+            "button",
+            "fiori",
+            "cheat-sheet"
+          ],
+          "agents": [
+            "rap-specialist"
+          ],
+          "source": "abap-cheat-sheets2",
+          "added": "2026-03-09",
+          "mandatory": false
+        }
+      ]
+    },
+    "cds-standard-sap": {
+      "label": "CDS & BDEF Standard SAP (exemplos reais)",
+      "description": "CDS views, behavior definitions, classes e interfaces extraídas do sistema SAP como referência de padrão",
+      "path": "cds-standard-sap/",
+      "agents": [
+        "rap-specialist",
+        "tech-lead"
+      ],
+      "entries": [
+        {
+          "id": "cds-standard-sap-001",
+          "title": "SAP Standard CDS Objects (5767 arquivos)",
+          "file": "cds-standard-sap/cds/",
+          "tags": [
+            "cds",
+            "standard",
+            "projection",
+            "sap"
+          ],
+          "agents": [
+            "rap-specialist",
+            "tech-lead"
+          ],
+          "source": "cds-help",
+          "added": "2026-03-09",
+          "mandatory": false,
+          "file_count": 5767
+        },
+        {
+          "id": "cds-standard-sap-002",
+          "title": "SAP Standard BDEF Objects (302 arquivos)",
+          "file": "cds-standard-sap/bdef/",
+          "tags": [
+            "bdef",
+            "behavior-definition",
+            "standard",
+            "sap"
+          ],
+          "agents": [
+            "rap-specialist",
+            "tech-lead"
+          ],
+          "source": "cds-help",
+          "added": "2026-03-09",
+          "mandatory": false,
+          "file_count": 302
+        },
+        {
+          "id": "cds-standard-sap-003",
+          "title": "SAP Standard CLASSES Objects (1414 arquivos)",
+          "file": "cds-standard-sap/classes/",
+          "tags": [
+            "interface",
+            "classe",
+            "abap",
+            "standard"
+          ],
+          "agents": [
+            "tech-lead"
+          ],
+          "source": "cds-help",
+          "added": "2026-03-09",
+          "mandatory": false,
+          "file_count": 1414
+        },
+        {
+          "id": "cds-standard-sap-004",
+          "title": "SAP Standard INTERFACES Objects (3262 arquivos)",
+          "file": "cds-standard-sap/interfaces/",
+          "tags": [
+            "interface",
+            "abap",
+            "standard"
+          ],
+          "agents": [
+            "tech-lead"
+          ],
+          "source": "cds-help",
+          "added": "2026-03-09",
+          "mandatory": false,
+          "file_count": 3262
+        },
+        {
+          "id": "cds-standard-sap-005",
+          "title": "SAP Standard TABLES Objects (9641 arquivos)",
+          "file": "cds-standard-sap/tables/",
+          "tags": [
+            "tabela",
+            "dictionary",
+            "standard"
+          ],
+          "agents": [
+            "tech-lead"
+          ],
+          "source": "cds-help",
+          "added": "2026-03-09",
+          "mandatory": false,
+          "file_count": 9641
+        }
+      ]
+    },
+    "partner-reference": {
+      "label": "SAP Partner Reference — Exemplo Completo RAP",
+      "description": "Aplicação RAP completa de referência: Music Festival com gerenciamento de visitantes. Projeto completo com src, Fiori apps, testes",
+      "path": "partner-reference/",
+      "agents": [
+        "rap-specialist",
+        "tech-lead"
+      ],
+      "entries": [
+        {
+          "id": "partner-reference-001",
+          "title": "Documentação do Partner Reference",
+          "file": "partner-reference/README.md",
+          "tags": [
+            "readme",
+            "documentação",
+            "overview",
+            "partner-reference"
+          ],
+          "agents": [
+            "rap-specialist",
+            "tech-lead"
+          ],
+          "source": "sample-abap-partner-reference",
+          "added": "2026-03-09",
+          "mandatory": false
+        },
+        {
+          "id": "partner-reference-002",
+          "title": "Changelog de versões",
+          "file": "partner-reference/CHANGELOG.md",
+          "tags": [
+            "changelog",
+            "versões",
+            "histórico",
+            "partner-reference"
+          ],
+          "agents": [
+            "rap-specialist",
+            "tech-lead"
+          ],
+          "source": "sample-abap-partner-reference",
+          "added": "2026-03-09",
+          "mandatory": false
+        },
+        {
+          "id": "partner-reference-003",
+          "title": "Código fonte RAP completo (Music Festival) (177 arquivos)",
+          "file": "partner-reference/src/",
+          "tags": [
+            "rap",
+            "abap",
+            "source",
+            "music-festival",
+            "partner-reference"
+          ],
+          "agents": [
+            "rap-specialist",
+            "tech-lead"
+          ],
+          "source": "sample-abap-partner-reference",
+          "added": "2026-03-09",
+          "mandatory": false,
+          "file_count": 177
+        },
+        {
+          "id": "partner-reference-004",
+          "title": "Fiori apps do projeto (42 arquivos)",
+          "file": "partner-reference/fiori-apps/",
+          "tags": [
+            "fiori",
+            "ui",
+            "app",
+            "launchpad",
+            "partner-reference"
+          ],
+          "agents": [
+            "rap-specialist",
+            "generalista"
+          ],
+          "source": "sample-abap-partner-reference",
+          "added": "2026-03-09",
+          "mandatory": false,
+          "file_count": 42
+        },
+        {
+          "id": "partner-reference-005",
+          "title": "Tutoriais passo-a-passo (92 arquivos)",
+          "file": "partner-reference/Tutorials/",
+          "tags": [
+            "tutorial",
+            "guia",
+            "hands-on",
+            "partner-reference"
+          ],
+          "agents": [
+            "rap-specialist",
+            "generalista"
+          ],
+          "source": "sample-abap-partner-reference",
+          "added": "2026-03-09",
+          "mandatory": false,
+          "file_count": 92
+        },
+        {
+          "id": "partner-reference-006",
+          "title": "Scripts de deploy e configuração (9 arquivos)",
+          "file": "partner-reference/deploy/",
+          "tags": [
+            "deploy",
+            "config",
+            "abapgit",
+            "partner-reference"
+          ],
+          "agents": [
+            "tech-lead"
+          ],
+          "source": "sample-abap-partner-reference",
+          "added": "2026-03-09",
+          "mandatory": false,
+          "file_count": 9
+        }
+      ]
+    },
+    "fiori-showcase": {
+      "label": "Fiori Elements Feature Showcase",
+      "description": "Documentação de features do Fiori Elements: list report, object page, header, content areas",
+      "path": "fiori-showcase/",
+      "agents": [
+        "rap-specialist",
+        "generalista"
+      ],
+      "entries": [
+        {
+          "id": "fiori-showcase-001",
+          "title": "Fiori Elements — Features Gerais",
+          "file": "fiori-showcase/01_general_features.md",
+          "tags": [
+            "fiori-elements",
+            "ui",
+            "list-report",
+            "object-page",
+            "annotations"
+          ],
+          "agents": [
+            "rap-specialist",
+            "generalista"
+          ],
+          "source": "abap-plataform-fiori-feature-showcase",
+          "added": "2026-03-09",
+          "mandatory": false
+        },
+        {
+          "id": "fiori-showcase-002",
+          "title": "List Report — Header & Toolbar",
+          "file": "fiori-showcase/02_list_report_header.md",
+          "tags": [
+            "fiori-elements",
+            "ui",
+            "list-report",
+            "object-page",
+            "annotations"
+          ],
+          "agents": [
+            "rap-specialist",
+            "generalista"
+          ],
+          "source": "abap-plataform-fiori-feature-showcase",
+          "added": "2026-03-09",
+          "mandatory": false
+        },
+        {
+          "id": "fiori-showcase-003",
+          "title": "List Report — Conteúdo & Colunas",
+          "file": "fiori-showcase/03_list_report_content.md",
+          "tags": [
+            "fiori-elements",
+            "ui",
+            "list-report",
+            "object-page",
+            "annotations"
+          ],
+          "agents": [
+            "rap-specialist",
+            "generalista"
+          ],
+          "source": "abap-plataform-fiori-feature-showcase",
+          "added": "2026-03-09",
+          "mandatory": false
+        },
+        {
+          "id": "fiori-showcase-004",
+          "title": "Object Page — Geral & Estrutura",
+          "file": "fiori-showcase/04_object_page_general.md",
+          "tags": [
+            "fiori-elements",
+            "ui",
+            "list-report",
+            "object-page",
+            "annotations"
+          ],
+          "agents": [
+            "rap-specialist",
+            "generalista"
+          ],
+          "source": "abap-plataform-fiori-feature-showcase",
+          "added": "2026-03-09",
+          "mandatory": false
+        },
+        {
+          "id": "fiori-showcase-005",
+          "title": "Object Page — Header & Facets",
+          "file": "fiori-showcase/05_object_page_header.md",
+          "tags": [
+            "fiori-elements",
+            "ui",
+            "list-report",
+            "object-page",
+            "annotations"
+          ],
+          "agents": [
+            "rap-specialist",
+            "generalista"
+          ],
+          "source": "abap-plataform-fiori-feature-showcase",
+          "added": "2026-03-09",
+          "mandatory": false
+        },
+        {
+          "id": "fiori-showcase-006",
+          "title": "Object Page — Conteúdo & Seções",
+          "file": "fiori-showcase/06_object_page_content.md",
+          "tags": [
+            "fiori-elements",
+            "ui",
+            "list-report",
+            "object-page",
+            "annotations"
+          ],
+          "agents": [
+            "rap-specialist",
+            "generalista"
+          ],
+          "source": "abap-plataform-fiori-feature-showcase",
+          "added": "2026-03-09",
+          "mandatory": false
+        }
+      ]
+    },
+    "abap-util": {
+      "label": "Utilitários ABAP (AJSON & libs)",
+      "description": "Biblioteca AJSON para manipulação de JSON em ABAP e outros utilitários",
+      "path": "abap-util/",
+      "agents": [
+        "tech-lead",
+        "generalista"
+      ],
+      "entries": [
+        {
+          "id": "abap-util-001",
+          "title": "AJSON — Biblioteca JSON para ABAP Cloud (47 arquivos)",
+          "file": "abap-util/src/",
+          "tags": [
+            "json",
+            "ajson",
+            "utility",
+            "serialize",
+            "deserialize",
+            "abap-cloud"
+          ],
+          "agents": [
+            "tech-lead",
+            "generalista"
+          ],
+          "source": "abap-util",
+          "added": "2026-03-09",
+          "mandatory": false,
+          "file_count": 47
+        },
+        {
+          "id": "abap-util-002",
+          "title": "AJSON — Configuração abaplint",
+          "file": "abap-util/abaplint.jsonc",
+          "tags": [
+            "abaplint",
+            "lint",
+            "qualidade",
+            "config"
+          ],
+          "agents": [
+            "tech-lead"
+          ],
+          "source": "abap-util",
+          "added": "2026-03-09",
+          "mandatory": false
+        }
+      ]
+    },
+    "cpi": {
+      "label": "SAP Cloud Integration (CPI)",
+      "description": "iFlows, BPMN, adapters, Groovy, XSLT, EIP patterns, security, CI/CD",
+      "path": "cpi/",
+      "agents": [
+        "cpi-specialist"
+      ],
+      "entries": [
+        {
+          "id": "cpi-err-001",
+          "title": "❌ Erro: ProcessDirect Outbound — Propriedades Obrigatórias Faltando no BPMN",
+          "file": "cpi/erros-aprendizados/processdirect-outbound-propriedades-faltando.md",
+          "tags": [
+            "cpi",
+            "processdirect",
+            "bpmn",
+            "iflow",
+            "gateway",
+            "adapter-details",
+            "exclusive-gateway",
+            "messageflow",
+            "erro-aprendido",
+            "alta"
+          ],
+          "agents": [
+            "cpi-specialist",
+            "aprendiz"
+          ],
+          "tipo": "erro-aprendido",
+          "severidade": "alta",
+          "added": "2025-01-01",
+          "mandatory": false
+        },
+        {
+          "id": "cpi-err-002",
+          "title": "❌ Erro: ExclusiveGateway como merge (convergente) não é suportado no SAP CPI",
+          "file": "cpi/erros-aprendizados/exclusive-gateway-merge-nao-suportado.md",
+          "tags": [
+            "cpi",
+            "bpmn",
+            "exclusive-gateway",
+            "merge",
+            "join",
+            "content-based-router",
+            "erro-aprendido",
+            "alta"
+          ],
+          "agents": [
+            "cpi-specialist",
+            "aprendiz"
+          ],
+          "tipo": "erro-aprendido",
+          "severidade": "alta",
+          "added": "2026-03-11",
+          "mandatory": false
+        }
+      ]
+    }
+  },
+  "agents": {
+    "generalista": {
+      "file": ".claude/agents/generalista.md",
+      "description": "Agente de entrada — analisa o prompt e roteia para o especialista correto",
+      "routes_to": [
+        "tech-lead",
+        "rap-specialist",
+        "badi-specialist",
+        "reports-specialist"
+      ],
+      "triggers": [
+        "qualquer prompt inicial sem domínio definido"
+      ]
+    },
+    "tech-lead": {
+      "file": ".claude/agents/tech-lead.md",
+      "description": "Arquitetura, code review, decisões técnicas, padrões de desenvolvimento SAP Cloud ERP",
+      "triggers": [
+        "arquitetura",
+        "design",
+        "review",
+        "padrão",
+        "decisão técnica",
+        "performance"
+      ]
+    },
+    "rap-specialist": {
+      "file": ".claude/agents/rap-specialist.md",
+      "description": "Especialista em RAP, CDS, behavior definitions, projections, actions, validations",
+      "triggers": [
+        "RAP",
+        "CDS",
+        "behavior definition",
+        "behavior implementation",
+        "projection",
+        "action",
+        "validation",
+        "determination",
+        "draft",
+        "OData",
+        "Fiori Elements"
+      ]
+    },
+    "badi-specialist": {
+      "file": ".claude/agents/badi-specialist.md",
+      "description": "Especialista em BAdIs, enhancement spots, customer includes, switch framework",
+      "triggers": [
+        "BAdI",
+        "enhancement",
+        "enhancement spot",
+        "customer include",
+        "switch framework",
+        "enhancement implementation"
+      ]
+    },
+    "reports-specialist": {
+      "file": ".claude/agents/reports-specialist.md",
+      "description": "Especialista em reports ABAP, ALV, SALV, selection screens",
+      "triggers": [
+        "report",
+        "relatório",
+        "ALV",
+        "SALV",
+        "selection screen",
+        "output list",
+        "programa executável"
+      ]
+    },
+    "cpi-specialist": {
+      "file": ".claude/agents/cpi-specialist.md",
+      "description": "Especialista em SAP Cloud Integration (CPI): iFlows, Groovy, XSLT, EIP patterns, adapters, security, CI/CD",
+      "triggers": [
+        "CPI",
+        "iFlow",
+        "Cloud Integration",
+        "Integration Suite",
+        "Groovy script",
+        "XSLT mapping",
+        "adapter",
+        "Splitter",
+        "Aggregator",
+        "EIP",
+        "Data Store",
+        "Delta Sync",
+        "Value Mapping",
+        "Partner Directory",
+        "ProcessDirect"
+      ]
+    }
+  },
+  "commands": {
+    "add_knowledge": {
+      "script": "scripts/add-knowledge.sh",
+      "usage": "bash fonte-conhecimento/scripts/add-knowledge.sh --domain <domain> --title <title> --file <file> [--tags tag1,tag2] [--agent agent1,agent2]",
+      "description": "Adiciona uma nova entrada de conhecimento ao domínio especificado e atualiza o index.json"
+    }
+  }
+}

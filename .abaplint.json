@@ -1,0 +1,142 @@
+{
+  "$schema": "https://schema.abaplint.org/schema.json",
+  "global": {
+    "files": "/src/**",
+    "exclude": [],
+    "rename_dont_break_dependencies": true,
+    "applyFormattingSettings": false
+  },
+  "syntax": {
+    "version": "Cloud",
+    "errorNamespace": "^(Z|Y|/YME/|/BME/)",
+    "globalConstants": [],
+    "globalMacros": []
+  },
+  "rules": {
+    "abapdoc": false,
+
+    "allowed_object_types": {
+      "allowed": [
+        "CLAS", "INTF", "PROG", "FUGR", "TABL", "DTEL", "DOMA",
+        "MSAG", "TTYP", "VIEW", "SUSH", "SUSC", "AUTH",
+        "XINX", "INDX", "ENHO", "ENHS", "ENHD"
+      ]
+    },
+
+    "avoid_use": {
+      "define": true,
+      "endselect": true,
+      "execSQL": true,
+      "kernelCall": true,
+      "communication": true,
+      "systemCall": true,
+      "break": true,
+      "statics": false
+    },
+
+    "7bit_ascii": true,
+
+    "cds_comment_style": true,
+
+    "cds_parser_error": true,
+
+    "check_subrc": true,
+
+    "check_syntax": true,
+
+    "cloud_types": true,
+
+    "cyclomatic_complexity": {
+      "max": 20
+    },
+
+    "empty_statement": true,
+
+    "exporting": true,
+
+    "functional_writing": true,
+
+    "identical_conditions": true,
+
+    "identical_form_names": true,
+
+    "in_list_is_empty": true,
+
+    "keyword_case": {
+      "style": "upper",
+      "ignoreExceptions": true,
+      "ignoreLowerClassImplmentationStatement": true,
+      "ignoreGlobalClassBoundary": false,
+      "ignoreKeywords": []
+    },
+
+    "line_length": {
+      "length": 120
+    },
+
+    "local_testclass_location": true,
+
+    "method_length": {
+      "statements": 80,
+      "errorWhenEmpty": false
+    },
+
+    "no_aliases": true,
+
+    "no_chained_assignment": true,
+
+    "no_external_form_calls": true,
+
+    "no_public_attributes": {
+      "ignoreExceptions": true,
+      "allowReadOnly": true
+    },
+
+    "prefer_corresponding": false,
+
+    "prefer_inline": true,
+
+    "prefer_returning_to_exporting": false,
+
+    "preferred_compare_operator": {
+      "badOperators": ["EQ", "NE", "LT", "GT", "LE", "GE"]
+    },
+
+    "remove_partial_clusters": false,
+
+    "select_add_order_by": true,
+
+    "selection_screen_naming": false,
+
+    "sequential_blank": {
+      "lines": 2
+    },
+
+    "short_case": {
+      "length": 1,
+      "allow": []
+    },
+
+    "slow_parameter_passing": true,
+
+    "superfluous_value": false,
+
+    "try_without_cx_root": true,
+
+    "type_form_parameters": true,
+
+    "unreachable_code": true,
+
+    "unused_variables": {
+      "skip": []
+    },
+
+    "use_class_based_exceptions": true,
+
+    "use_line_exists": true,
+
+    "use_new": true,
+
+    "when_others_last": true
+  }
+}
